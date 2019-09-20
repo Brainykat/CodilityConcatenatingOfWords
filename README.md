@@ -22,4 +22,5 @@ N is an integer within the range [1..100,000];
 all the words are non−empty and consist only of lowercase letters (a−z);
 S denotes the sum of the lengths of words; S is an integer within the range [1..100,000].
 
-## Optmize function getting consecutive letters from a word
+## Score ...
+44
