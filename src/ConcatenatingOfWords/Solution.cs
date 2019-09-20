@@ -11,17 +11,17 @@ namespace ConcatenatingOfWords
             if (words.Count() == 0) return 0;
             if (words.Count() == 1)
             {
-                return GetLoggestRun(words[0]);
+                return GetLongestRun(words[0]);
             }
             List<int> counts = new List<int>();
             var ms = Permutate<string>(words).Select(a => a.Aggregate((current, next) => $"{current}{next}")).ToList();
             foreach (var g in ms)
             {
-                counts.Add(GetLoggestRun(g));
+                counts.Add(GetLongestRun(g));
             }
             return counts.Max();
         }
-        public int GetLoggestRun(string word)
+        public int GetLongestRun(string word)
         {
             return new string(word.Select((c, index) => word.Substring(index).TakeWhile(e => e == c))
                                    .OrderByDescending(e => e.Count())
@@ -40,9 +40,7 @@ namespace ConcatenatingOfWords
         }
         public static IEnumerable<TSource> Prepend<TSource>(IEnumerable<TSource> source, TSource item)
         {
-
             yield return item;
-
             foreach (var element in source)
                 yield return element;
         }
