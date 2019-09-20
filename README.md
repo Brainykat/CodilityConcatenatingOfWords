@@ -24,3 +24,30 @@ S denotes the sum of the lengths of words; S is an integer within the range [1..
 
 ## Score ...
 44
+▶max_words_with_long_substring
+S = 100,000, each word contains long substring with one letter.✘TIMEOUT ERROR
+running time: 1.484 sec., time limit: 0.100 sec.
+1.1.484 sTIMEOUT ERROR, running time: 1.484 sec., time limit: 0.100 sec.
+stderr:
+Unhandled Exception:
+OutOfMemoryException
+[ERROR] FATAL UNHANDLED EXCEPTION: System.OutOfMemoryException: Out of memory
+  at (wrapper managed-to-native) object:__icall_wrapper_mono_gc_alloc_string (intptr,intptr,int)
+  at (wrapper alloc) object:AllocString (intptr,int)
+  at System.Text.StringBuilder..ctor (System.String value, Int32 startIndex, Int32 length, Int32 capacity, Int32 maxCapacity) [0x00000] in <filename unknown>:0 
+  at System.Text.StringBuilder..ctor (System.String value, Int32 startIndex, Int32 length, Int32 capacity) [0x00000] in <filename unknown>:0 
+  at System.Text.StringBuilder..ctor (Int32 capacity) [0x00000] in <filename unknown>:0 
+  at System.String.FormatHelper (System.Text.StringBuilder result, IFormatProvider provider, System.String format, System.Object[] args) [0x00000] in <filename unknown>:0 
+  at System.String.Format (IFormatProvider provider, System.String format, System.Object[] args) [0x00000] in <filename unknown>:0 
+  at System.String.Format (System.String format, System.Object arg0, System.Object arg1) [0x00000] in <filename unknown>:0 
+  at Solution.<solution>m__2 (System.String current, System.String next) [0x00000] in <filename unknown>:0 
+  at System.Linq.Enumerable.Aggregate[String] (IEnumerable`1 source, System.Func`3 func) [0x00000] in <filename unknown>:0 
+  at Solution.<solution>m__0 (IEnumerable`1 a) [0x00000] in <filename unknown>:0 
+  at System.Linq.Enumerable+<CreateSelectIterator>c__Iterator10`2[System.Collections.Generic.IEnumerable`1[System.String],System.String].MoveNext () [0x00000] in <filename unknown>:0 
+  at System.Collections.Generic.List`1[System.String]..ctor (IEnumerable`1 collection) [0x00000] in <filename unknown>:0 
+  at System.Linq.Enumerable.ToList[String] (IEnumerable`1 source) [0x00000] in <filename unknown>:0 
+  at Solution.solution (System.String[] words) [0x00000] in <filename unknown>:0 
+  at SolutionWrapper.run (System.String input, System.String output) [0x00000] in <filename unknown>:0 
+  at SolutionWrapper.Main (System.String[] args) [
+2.6.000 sTIMEOUT ERROR, Killed. Hard limit reached: 6.000 sec.
+3.6.000 sTIMEOUT ERROR, Killed. Hard limit reached: 6.000 sec.
