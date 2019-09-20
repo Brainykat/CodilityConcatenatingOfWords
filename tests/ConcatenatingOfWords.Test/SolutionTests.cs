@@ -25,5 +25,15 @@ namespace ConcatenatingOfWords.Test
             var res = sln.solution(words);
             Assert.Equal(result, res);
         }
+        [Fact]
+        public void solution_Returns_ExpectedResults_Large()
+        {
+             int result = 100000;
+            var str = new string('a', result);
+            string[] words = new string[] { str };
+            Solution sln = new Solution();
+            var res = sln.solution(words);
+            Assert.Equal(result, res);
+        }
     }
 }
